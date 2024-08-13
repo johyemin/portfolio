@@ -1130,7 +1130,7 @@
 .com_gallery_wrap .project_list li .desc_wrap .event_info {
   font-size: 12px;
   line-height: 1.25em;
-  color: var(--point-blue-2);
+  color: var(--point-blue-1);
 }
 
 @media screen and (max-width:1080px) {
