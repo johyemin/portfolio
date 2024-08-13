@@ -1,0 +1,119 @@
+@charset "utf-8";
+/* color root : s */
+:root{
+  --white: #ffffff;
+  --black: #000000;
+
+  /* Basic Mono Color */
+  --mono-0: #000;
+  --mono-1: #222;
+  --mono-2: #080808;
+  --mono-3 : #333333; 
+  --mono-4: #666;
+  --mono-5: #999;
+  --mono-6: #ccc;
+  --mono-7: #eee;
+  --mono-8: #f2f2f2;
+  --mono-9: #f9f9f9;
+  --mono-10: #FCFDFE;
+  --mono-11: #BCBCBC;
+  --mono-12: #fff;
+
+  /* Basic Point Color */
+  --point-blue-1: #102B48;
+  --point-blue-2: #DCE6F1;
+  --point-blue-3: #F5F8FB;
+  --point-blue-4: #156BBB;
+  --point-blue-5: #E8EFF6;
+  --point-blue-6: #EFF5FB;
+  --point-blue-7: #F5F8FB;
+  --point-blue-9: #F6F9FC;
+  --point-blue-10: #C8E5FF;
+  --point-blue-11: #B2CAE0;
+  --point-blue-12: #F7F9FB;
+
+  --point-yellow-1: #F59234;
+  --point-yellow-2: #8E772F;
+  --point-yellow-3: #FDEFC4;
+  --point-yellow-4: #EE8827;
+  --point-pink-1: #CD1717;
+  --point-pink-2: #FDEDF0;
+  --point-green-1: #4E9680;
+  --point-green-2: #D8F3E8;
+  --point-green-3: #EBF6EE;
+  --point-green-4: #33AF57;
+
+  /* Gradient Color */
+  --gradient-blue: linear-gradient(120deg, rgba(0,79,152,0.8),rgba(21,107,187,0.8));
+  --gradient-blue02: linear-gradient(150deg, rgba(21,107,187,0.8), rgba(0,79,152,0.8));
+
+
+  /* Sementic Text */
+  --text-primary: var(--mono-0);
+  --text-primary02: var(--mono-3);
+  --text-secondary: var(--mono-5);
+  --text-tertiary: var(--mono-4);
+  --sementic-text-hover: var(--point-blue-1);
+  --sementic-text-select: var(--mono-1);
+  --text-reverse: var(--mono-12);
+
+  /* Sementic Background */
+  --header-bg: var(--mono-10);
+  --lnb-bk-bg: var(--mono-1);
+  --lnb-bl-bg: var(--point-blue-2);
+  --lnb-yl-bg: var(--point-yellow-1);
+  --lnb-select-bg: var(--mono-12);
+  --bg-basic: var(--mono-12);
+  --empty-bg: var(--mono-11);
+
+  /* Sementic Icon */
+  --icon-basic: var(--point-blue-1);
+
+  /* Sementic LNB */
+  --lnb-icon: var(--mono-12);
+  --lnb-bk-hover: var(--mono-1);
+  --lnb-bl-hover: var(--point-blue-2);
+  --lnb-yl-hover: var(--point-yellow-1);
+  --lnb-text: var(--mono-12);
+
+  /* Dashboard Color */
+  --dashboard-row-bg: var(--point-blue-7);
+  --dashboard-card-gradient-bg: var(--gradient-blue);
+
+  /* Border Color */
+  --border-basic: var(--mono-7); 
+  --border-hover: var(--point-blue-1);
+
+  /* input Color */
+  --input-basic: var(--mono-7);
+  --input-focus: var(--mono-1);
+  --input-error: var(--point-pink-1);
+
+  /* checkBox Color */
+  --chkBox-basic-border: var(--mono-6);
+  --chkBox-basic-bg: var(--mono-12);
+  --chkBox-icon: var(--mono-6);
+  --chkBox-chk-icon: var(--mono-12);
+  --chkBox-chk:var(--point-blue-2);
+  --chkBox-disabled-bg: var(--mono-6);
+
+  /* Button Color */
+  --btn-basic-bg: var(--point-blue-2);
+  --btn-basic-txt: var(--white);
+  --btn-basic-hover-bg: var(--point-blue-1);
+
+  /* Shodow */
+  --shadow: rgb(0 0 0/16%);
+  --blue-shadow : rgb(8 12 56/0.15);
+
+  /* popup */
+  --popup-bg : var(--mono-12);
+  --popup-border: #707070;
+
+  /* toast */
+  --toast-bg : var(--point-green-3);
+  --toast-border : var(--point-green-4);
+  --toast-txt : var(--point-green-4);
+
+}
+/* color root : e */
