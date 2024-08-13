@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>조혜민 포트폴리오</title>
+    <script src="https://kit.fontawesome.com/771fe402f4.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/jquery-ui.min.css">
+    <link rel="stylesheet" href="css/XEIcon-2.2.0/xeicon.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/color_root.css"> <!-- color css -->
+    <link rel="stylesheet" href="css/sub.css">
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/common.js"></script>
+
+</head>
+
+<body>
+
+    <div id="wrap" class="wrap">
+        <div class="sub_wrap mypage_wrap">
+            <!-- lnb -->
+            <div id="lnb" class="lnb">
+                <div class="lnb_menu_wrap">
+                    <div class="lnb_top">
+                        <div class="logo ft_gmk">
+                            <a href="index.html" class="open"><span class="ft_bold">Cho Hyemin</span><br>Portfolio</a>
+                            <a href="index.html" class="summary"><span class="ft_bold">Hyem</span></a>
+                        </div>
+                    </div>
+                    <div class="lnb_menu_list">
+                        <div class="lnb_mark">
+                            <div class="lnb_mark_deco top"></div>
+                            <div class="lnb_mark_deco bottom"></div>
+                        </div>
+                        <ul>
+                            <li class="select">
+                                <a href="#tit">
+                                    <div class="lnb_icon">
+                                        <img class="icon" src="img/icon/nav_icon1.png" alt="마이페이지 아이콘">
+                                        <img class="icon on" src="img/icon/nav_icon1_on.png" alt="마이페이지 아이콘">
+                                    </div>
+                                    <div class="lnb_tit">Profile</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#card_tit">
+                                    <div class="lnb_icon">
+                                        <img class="icon" src="img/icon/nav_icon2.png" alt="마이페이지 아이콘">
+                                        <img class="icon on" src="img/icon/nav_icon2_on.png" alt="마이페이지 아이콘">
+                                    </div>
+                                    <div class="lnb_tit">Works</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://drive.google.com/file/d/1TicIb44KKkKvquZPL__9rBNjhyV1kMiS/view?usp=sharing">
+                                    <div class="lnb_icon">
+                                        <img class="icon" src="img/icon/nav_icon3.png" alt="마이페이지 아이콘">
+                                        <img class="icon on" src="img/icon/nav_icon3_on.png" alt="마이페이지 아이콘">
+                                    </div>
+                                    <div class="lnb_tit">자기소개서</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/johyemin" target="_blank">
+                                    <div class="lnb_icon">
+                                        <img class="icon" src="img/icon/nav_icon4.png" alt="마이페이지 아이콘">
+                                        <img class="icon on" src="img/icon/nav_icon4_on.png" alt="마이페이지 아이콘">
+                                    </div>
+                                    <div class="lnb_tit">Github</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+<!-- script -->
+            <script>
+                $(document).ready(function () {
+                    //lnb 마우스 오버 시 따라다니는 mask : s
+                    $('.lnb_menu_list ul > li').each(function () {
+                        let $selectList = $('.lnb_menu_list ul > li.select');
+                        $selectList.addClass('mouseover');
+                        let $mark = $(this).parents('#lnb').find('.lnb_mark');
+                        let lnbActive = $selectList.position().top;
+                        $mark.css('top', lnbActive);
+
+
+                        $(this).mouseover(function () {
+                            $('.lnb_menu_list ul > li').removeClass('mouseover');
+                            $(this).addClass('mouseover');
+                            let lnbActive = $(this).position().top;
+                            $mark.css('top', lnbActive);
+
+                        });
+                        $(this).mouseleave(function () {
+                            $('.lnb_menu_list ul > li').removeClass('mouseover');
+                            $selectList.addClass('mouseover');
+                            $mark.css('top', lnbActive);
+                        });
+                    });
+
+                });
+
+            </script>
+<!-- script -->
+
+<!-- header upper -->
+<div class="mob_lnb_wrap">
+    <div class="mob_lnb_bar">
+      <div class="inner">
+        <h1 class="logo"><a href="index.html"><span class="ft_bold">Cho Hyemin</span> Portfolio</a></h1>
+        <div class="mob_lnb_toggle_btn">
+          <div class="lnb_btn_bar top"></div>
+          <div class="lnb_btn_bar bottom"></div>
+        </div>
+      </div>
+    </div>
+    <div class="mob_lnb_menu">
+      <div class="mob_lnb">
+        <ul>
+          <li class="select">
+            <a href="#tit">
+              <div class="lnb_icon">
+                <img class="icon" src="img/icon/nav_icon1.png" alt="마이페이지 아이콘">
+                <img class="icon on" src="img/icon/nav_icon1_on.png" alt="마이페이지 아이콘">
+              </div>
+              <p class="txt">Profile</p>
+            </a>
+          </li>
+          <li>
+            <a href="#card_tit">
+              <div class="lnb_icon">
+                <img class="icon" src="img/icon/nav_icon2.png" alt="마이페이지 아이콘">
+                <img class="icon on" src="img/icon/nav_icon2_on.png" alt="마이페이지 아이콘">
+              </div>
+              <p class="txt">Works</p>
+            </a>
+          </li>
+          <li>
+            <a href="https://drive.google.com/file/d/1CxEuH65X_9xKsgdHzVqQ9r8FllP1GVT4/view?usp=drive_link">
+              <div class="lnb_icon">
+                <div class="icon on i_icon"><i class="xi-profile-o"></i></div>
+              </div>
+              <p class="txt">자기소개서</p>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/johyemin" target="_blank">
+              <div class="lnb_icon">
+                <div class="icon on i_icon"><i class="xi-github"></i></div>
+              </div>
+              <p class="txt">Github</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(document).ready(function(){
+
+      $('.mob_lnb_menu').on('click', function(e){
+        if(!($(e.target).hasClass('mob_lnb') || $(e.target).parents('.mob_lnb').length > 0)){
+          gnbClose();
+        }
+      });
+    
+      $('.mob_lnb > ul > li').each(function(){
+        if($(this).hasClass('select')){
+          $(this).addClass('select');
+          $(this).find('ul').stop().slideDown(300);
+        }
+      });
+    
+      $('.mob_lnb > ul > li >div ').on('click', function(){
+        var $gnb = $(this).parent();
+        if($gnb.siblings('.select').length > 0){
+          $gnb.siblings('.select').find('ul').stop().slideUp(300);
+          $gnb.siblings('.select').removeClass('select');
+        }
+    
+        if($gnb.hasClass('select')){
+          $gnb.removeClass('select');
+          $gnb.find('ul').stop().slideUp(300);
+          
+        }else{
+          $gnb.addClass('select');
+          $gnb.find('ul').stop().slideDown(300);
+        }
+      });
+      $(document).on('click','.mob_lnb_toggle_btn',function(){
+        if($('.mob_lnb_wrap').hasClass('on')){
+          $('.mob_lnb_wrap').removeClass('on')
+          $('#wrap').css('overflow-y','inherit');
+        }else{
+          $('.mob_lnb_wrap').addClass('on')
+          $('#wrap').css('overflow-y','hidden');
+        }
+      });
+      jQuery.browser = {};
+      (function () {
+          jQuery.browser.msie = false;
+          jQuery.browser.version = 0;
+          if (navigator.userAgent.match(/MSIE ([0-9]+)\./)) {
+              jQuery.browser.msie = true;
+              jQuery.browser.version = RegExp.$1;
+          }
+      })();
+      let hdFixedFlag = false;
+      $('.wrap').scroll(function(){
+        let scrollHeight = $('.mob_lnb_bar').height();
+
+        let scrollTop = $(this).scrollTop();
+        if (scrollTop > scrollHeight) {
+          if(!hdFixedFlag){
+            hdFixedFlag = true;
+            setTimeout(function(){
+              $('.mob_lnb_bar').addClass('fixed');
+            }, 100);
+          }
+        } else {
+          if(hdFixedFlag){
+            hdFixedFlag = false;
+            $('.mob_lnb_bar').removeClass('fixed');
+          }
+        }
+      });
+
+
+    });
+    //mob resize
+    $(window).resize(function(){
+      var winWdi = window.innerWidth;
+      if(winWdi > 1080){
+        $('.mob_lnb_wrap').removeClass('on')
+        $('#wrap').css('overflow-y','inherit');
+      }
+    });
+
+  </script>
+<!-- header upper -->
+
+
+            <div class="com_sub_section_wrap">
+                <div class="com_sub_cont_wrap portfolio_dashboard">
+                    <div class="com_sub_cont_tit">
+                        <p id="tit">Portfolio</p>
+                    </div>
+                    <div class="com_card_wrap flex_cont">
+                        <section class="card_row fix_row my_card_row">
+                            <div class="card_inner flex_cont">
+                                <div class="card_cont_area my_info_area">
+                                    <div class="my_info_wrap">
+                                        <div class="my_info flex_cont">
+                                            <div class="my_img" style="background-image: url(img/profile.png);"></div>
+                                            <div class="info_txt">
+                                                <p class="cate">신입 퍼블리셔</p>
+                                                <div class="keyword">
+                                                    안녕하세요 <br>깔끔함을 좋아하는 퍼블리셔
+                                                    <span class="name ft_bold">조혜민</span>입니다.
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="com_btn_wrap">
+                                            <button class="btn_basic half_btn sky_bule01"
+                                                onclick="location.href='https://drive.google.com/file/d/1CxEuH65X_9xKsgdHzVqQ9r8FllP1GVT4/view?usp=sharing'">
+                                                <div class="icon on i_icon"><i class="xi-user"></i></div>
+                                                <p class="txt">이력서 열기</p>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </section>
+                        <section class="card_row fluid_row intro_card_row">
+                            <div class="card_inner scroll_inner">
+                                <div class="card_head">
+                                    <div class="card_tit">About</div>
+                                </div>
+                                <div class="card_cont_area">
+                                    <div class="intro_noti">
+                                        <div class="accordion_cont_wrap scroll_cont">
+                                            <div class="accordion_cont">
+                                                <div class="accordion_head">
+                                                    <div class="noti_btn"><button type="button"
+                                                            class="btn_basic oval w70 red_btn">대화</button></div>
+                                                    <div class="subject">대화는 모든 일의 기본! 타인과의 대화를 중요시 여깁니다.</div>
+                                                </div>
+                                                <div class="accordion_body">
+                                                    <div class="content">
+                                                        <p class="txt">사이트를 구현함에 있어 다양한 사람들과의 협업이 있음을 알고 있습니다.
+                                                            그렇기에 다양한 사람들과의 대화를 겁내지 않고 적극적인 면모로 임하겠습니다.
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion_cont">
+                                                <div class="accordion_head">
+                                                    <div class="noti_btn"><button type="button"
+                                                            class="btn_basic oval w70 red_btn">노력</button></div>
+                                                    <div class="subject">현실에 안주하지 않고 앞으로 나아가기 위해 노력합니다.</div>
+                                                </div>
+                                                <div class="accordion_body">
+                                                    <div class="content">
+                                                        <p class="txt">웹 퍼블리싱의 대한 이해도를 높이기 위해 노력합니다. JavaScript 기반인
+                                                            gsap을 사용한 적이 있으며
+                                                            swiper와 slick 등 다양한 라이브러리를 사용한 경험이 있습니다.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="accordion_cont">
+                                                <div class="accordion_head">
+                                                    <div class="noti_btn"><button type="button"
+                                                            class="btn_basic oval w70 red_btn">반응형</button></div>
+                                                    <div class="subject">반응형은 기본이라 생각합니다.</div>
+                                                </div>
+                                                <div class="accordion_body">
+                                                    <div class="content">
+                                                        <p class="txt">어떤 화면에서도 잘 보이는 반응형이 동작하도록 합니다. 깨지는 곳이 없도록
+                                                            살피고 기기가 작아져도 자연스럽게 전환 되도록 만듭니다.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="accordion_cont">
+                                                <div class="accordion_head">
+                                                    <div class="noti_btn"><button type="button"
+                                                            class="btn_basic oval w70 red_btn">자격증</button></div>
+                                                    <div class="subject">지금까지 취득한 자격증은?</div>
+                                                </div>
+                                                <div class="accordion_body">
+                                                    <div class="content">
+                                                        <p class="txt">웹 디자인 기능사, 컴퓨터 그래픽스 운용 기능사, 컴퓨터 활용 능력 2급 자격증을
+                                                            취득하였으며
+                                                            ACP 자격증으로 포토샵, 일러스트레이터, 인디자인 분야를 취득했습니다. 후에 정보처리기능사를 취득할 계획을
+                                                            하고 있습니다.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="accordion_cont">
+                                                <div class="accordion_head">
+                                                    <div class="noti_btn"><button type="button"
+                                                            class="btn_basic oval w70 etc_btn ">공부</button></div>
+                                                    <div class="subject">퍼블리셔를 향한 한 걸음을 꾸준하게!</div>
+                                                </div>
+                                                <div class="accordion_body">
+                                                    <div class="content">
+                                                        <p class="txt">구직을 하는 공백 기간 게을러지지 않도록 공부를 하고 있습니다. 저는 vue js에
+                                                            대해 공부하려고 합니다.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="card_row skill_card_row">
+                            <div class="card_head">
+                                <div class="card_tit">Skill</div>
+                            </div>
+                            <div class="card_inner scroll_inner">
+                                <div class="card_cont_area">
+                                    <div class="skill_cont_wrap my_skill_cont_wrap scroll_cont">
+                                        <div class="skill_box">
+                                            <div class="skill_list">
+                                                <a href="#" onclick="return false">
+                                                    <div class="skill_name">html5</div>
+                                                    <div class="skill_thumb"><img src="img/html.png" alt="html"></div>
+                                                    <div class="skill_txt_box">
+                                                        <div class="subject">기본을 준수하며 반응형에 맞는 코드와 웹 표준을 준수합니다.</div>
+                                                        <div class="info">
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="skill_box">
+                                            <div class="skill_list">
+                                                <a href="#" onclick="return false">
+                                                    <div class="skill_name">css3</div>
+                                                    <div class="skill_thumb"><img src="img/css.png" alt="css"></div>
+                                                    <div class="skill_txt_box">
+                                                        <div class="subject">플렉스, 그리드와 같은 것들을 사용해 웹 페이지 레이아웃을 잡고 스타일을
+                                                            줄 수 있습니다.</div>
+                                                        <div class="info">
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="skill_box">
+                                            <div class="skill_list">
+                                                <a href="#" onclick="return false">
+                                                    <div class="skill_name">jQuery</div>
+                                                    <div class="skill_thumb"><img src="img/js.png" alt="js"></div>
+                                                    <div class="skill_txt_box">
+                                                        <div class="subject">기본적인 이벤트나 애니메이션 효과를 처리를 할 수 있습니다. <br>적절한
+                                                            플러그인을
+                                                            사용할 수 있습니다.</div>
+                                                        <div class="info">
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="skill_box">
+                                            <div class="skill_list">
+                                                <a href="#" onclick="return false">
+                                                    <div class="skill_name">JavaScript</div>
+                                                    <div class="skill_thumb"><img src="img/js.png" alt="js"></div>
+                                                    <div class="skill_txt_box">
+                                                        <div class="subject">기본적인 문법을 인지하고 제어문, 함수에 대한 개념을 가지고 있습니다.
+                                                        </div>
+                                                        <div class="info">
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="skill_box">
+                                            <div class="skill_list">
+                                                <a href="#" onclick="return false">
+                                                    <div class="skill_name">Photoshop</div>
+                                                    <div class="skill_thumb"><img src="img/ps.png" alt="ps"></div>
+                                                    <div class="skill_txt_box">
+                                                        <div class="subject">이미지를 보정하거나 기본적인 포토샵 기능을 사용할 수 있습니다.</div>
+                                                        <div class="info">
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="skill_box">
+                                            <div class="skill_list">
+                                                <a href="#" onclick="return false">
+                                                    <div class="skill_name">Illustrator</div>
+                                                    <div class="skill_thumb"><img src="img/ai.png" alt="ai"></div>
+                                                    <div class="skill_txt_box">
+                                                        <div class="subject">일러스트를 사용해 포스터 디자인을
+                                                            진행해 반려동물 포스터를 제작했습니다.</div>
+                                                        <div class="info">
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="skill_box">
+                                            <div class="skill_list">
+                                                <a href="#" onclick="return false">
+                                                    <div class="skill_name">Figma</div>
+                                                    <div class="skill_thumb"><img src="img/figma.png" alt="figma"></div>
+                                                    <div class="skill_txt_box">
+                                                        <div class="subject">피그마를 사용해 디자인을 할 수 있습니다.<br> 웹 페이지에 적절한 그리드를
+                                                            입력할 수 있으며 플러그인을 사용할 수 있습니다.</div>
+                                                        <div class="info">
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="skill_box">
+                                            <div class="skill_list">
+                                                <a href="#" onclick="return false">
+                                                    <div class="skill_name">Git</div>
+                                                    <div class="skill_thumb"><img src="img/git.png" alt="git"></div>
+                                                    <div class="skill_txt_box">
+                                                        <div class="subject">파일을 업로드 할 수 있습니다 <br>터미널이 익숙하지 않지만 커밋에 대한 개념을
+                                                            가지고 있습니다.</div>
+                                                        <div class="info">
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="card_row proof_card_row com_gallery_wrap">
+                            <div class="card_head">
+                                <div id="card_tit">Works</div>
+                                <div class="card_info">
+                                    <p>이미지를 클릭하면 사이트로 넘어갑니다!</p>
+                                </div>
+                            </div>
+                            <div class="card_inner">
+                                <ul class="project_list">
+                                    <li class="goods">
+                                        <div class="cont">
+                                            <div class="link">
+                                                <a href="https://johyemin.github.io/withu">
+                                                    <div class="thumnail">
+                                                        <div class="inner">
+                                                            <div class="img"
+                                                                style="background-image: url(img/withu.png);">
+                                                                <!--thum-->
+                                                            </div>
+                                                            <div class="expiration_date">
+                                                                <p class="date_txt">반응형</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="desc_wrap">
+                                                        <p class="prd_tit max_line_2">위드유 정신건강의학과의원</p>
+                                                        <p class="brand"><span class="txt">창착 브랜드 홈페이지를 제작했습니다.
+                                                                Bootstrap을 사용해 병원 페이지의 깔끔함을 표현했습니다.</span></p>
+                                                        <p class="event_info">기획˙참여 100% / jQuery / 메인+서브 2</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="goods">
+                                        <div class="cont">
+                                            <div class="link">
+                                                <a href="https://johyemin.github.io/maeil" target="_blank">
+                                                    <div class="thumnail">
+                                                        <div class="inner">
+                                                            <div class="img"
+                                                                style="background-image: url(img/maeil.png);">
+                                                                <!--thum-->
+                                                            </div>
+                                                            <div class="expiration_date">
+                                                                <p class="date_txt">반응형</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="desc_wrap">
+                                                        <p class="prd_tit max_line_2">매일 유업</p>
+                                                        <p class="brand"><span class="txt">정리되지 않은 매일 유업의 기존 페이지를 보고 정보를
+                                                                시각화 하는 것에 목적을 두고 리뉴얼 하였습니다. Swiper와 AOS를 사용하였습니다.</span>
+                                                        </p>
+                                                        <p class="event_info">기획˙참여 100% / jQuery / 메인+서브 3</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="goods">
+                                        <div class="cont">
+                                            <div class="link">
+                                                <a href="https://johyemin.github.io/gb" target="_blank">
+                                                    <div class="thumnail">
+                                                        <div class="inner">
+                                                            <div class="img" style="background-image: url(img/gb.png);">
+                                                                <!--thum-->
+                                                            </div>
+                                                            <div class="expiration_date">
+                                                                <p class="date_txt">반응형</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="desc_wrap">
+                                                        <p class="prd_tit max_line_2">경복궁 관리소</p>
+                                                        <p class="brand"><span class="txt">경복궁에서 열리는 다양한 행사들을 시간 순으로
+                                                                소개해 기존 페이지를 리뉴얼하였습니다. Slick을 사용해 슬라이드를 구성했습니다.
+                                                            </span></p>
+                                                        <p class="event_info">기획˙참여 100% / jQuery / 메인</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="goods">
+                                        <div class="cont">
+                                            <div class="link">
+                                                <a
+                                                    href="https://drive.google.com/file/d/1A1PQalM1_5iRid1bxtdH92eJK5gCn53n/view?usp=sharing">
+                                                    <div class="thumnail">
+                                                        <div class="inner">
+                                                            <div class="img"
+                                                                style="background-image: url(img/uxui.png);">
+                                                                <!--thum-->
+                                                            </div>
+                                                            <div class="expiration_date">
+                                                                <p class="date_txt">ux·ui</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="desc_wrap">
+                                                        <p class="prd_tit max_line_2">UX/UI 투썸하트</p>
+                                                        <p class="brand"><span class="txt">데스크 리서치를 통해 사용자 평가를 분석했습니다.
+                                                                배달과 픽업 서비스, 알람 기능, 추천 메뉴 및 자주 찾는 메뉴를 추가하고 레이아웃을
+                                                                개선했습니다.</span></p>
+                                                        <p class="event_info">기획˙참여 100% / UXUI </p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="goods">
+                                        <div class="cont">
+                                            <div class="link">
+                                                <a href="https://cjm1217001.cafe24.com/#none" target="_blank">
+                                                    <div class="thumnail">
+                                                        <div class="inner">
+                                                            <div class="img"
+                                                                style="background-image: url(img/lumiere.png);">
+                                                                <!--thum-->
+                                                            </div>
+                                                            <div class="expiration_date">
+                                                                <p class="date_txt">반응형</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="desc_wrap">
+                                                        <p class="prd_tit max_line_2">Lumière</p>
+                                                        <p class="brand"><span class="txt">창착 쥬얼리 브랜드를 제작했습니다.
+                                                                Cafe 24의 유연성과 기능적인 편리함을 활용해 각 제품에 맞는 명확한 카테고리 분류와 함께 브랜드의
+                                                                이벤트 배너를 제작했습니다.</span></p>
+                                                        <p class="event_info">기획˙참여 100% </p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="goods">
+                                        <div class="cont">
+                                            <div class="link">
+                                                <a href="https://johyemin.github.io/p" target="_blank">
+                                                    <div class="thumnail">
+                                                        <div class="inner">
+                                                            <div class="img"
+                                                                style="background-image: url(img/first_portfolio.png);">
+                                                                <!--thum-->
+                                                            </div>
+                                                            <div class="expiration_date">
+                                                                <p class="date_txt">반응형</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="desc_wrap">
+                                                        <p class="prd_tit max_line_2">첫 포트폴리오</p>
+                                                        <p class="brand"><span class="txt">처음 제작한 포트폴리오 입니다. gsap을 사용해
+                                                                가로 스크롤로 작업물이 이동합니다. 사용자의 입장에서
+                                                                봤을 때 개선점이 많아 새로 제작하는 계기가 되었습니다.</span></p>
+                                                        <p class="event_info">기획˙참여 100% / GSAP / 메인</p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li class="goods">
+                                        <div class="cont">
+                                            <div class="link">
+                                                <a href="https://johyemin.github.io/color" target="_blank">
+                                                    <div class="thumnail">
+                                                        <div class="inner">
+                                                            <div class="img"
+                                                                style="background-image: url(img/color.png);">
+                                                                <!--thum-->
+                                                            </div>
+                                                            <div class="expiration_date">
+                                                                <p class="date_txt">Study</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="desc_wrap">
+                                                        <p class="prd_tit max_line_2">Color Flipper</p>
+                                                        <p class="brand"><span class="txt">자바스크립트 공부를 위해 Color Flipper
+                                                                제작했습니다. Click 액션이 있을 경우 for 구문을 통해 랜덤으로 색상이 화면에 표현되는 기능을
+                                                                구현했습니다.</span></p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="goods">
+                                        <div class="cont">
+                                            <div class="link">
+                                                <a href="https://johyemin.github.io/counter" target="_blank">
+                                                    <div class="thumnail">
+                                                        <div class="inner">
+                                                            <div class="img"
+                                                                style="background-image: url(img/counter.png);">
+                                                                <!--thum-->
+                                                            </div>
+                                                            <div class="expiration_date">
+                                                                <p class="date_txt">Study</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="desc_wrap">
+                                                        <p class="prd_tit max_line_2">Counter</p>
+                                                        <p class="brand"><span class="txt">forEach와 if - else 구문을 공부하는 계기가 되었습니다. 동일한 ‘btn’
+                                                                클래스지만 classList에 따로 부여된 클래스가 있는 경우 그에 맞는 동작이
+                                                                이뤄집니다.</span></p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <li class="goods">
+                                        <div class="cont">
+                                            <div class="link">
+                                                <a href="#" target="_blank">
+                                                    <div class="thumnail">
+                                                        <div class="inner">
+                                                            <div class="img"
+                                                                style="background-color: #333;">
+                                                                <!--thum-->
+                                                            </div>
+                                                            <div class="expiration_date">
+                                                                <p class="date_txt">Studying</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="desc_wrap">
+                                                        <p class="prd_tit max_line_2">공부 중입니다.</p>
+                                                        <p class="brand"><span class="txt">새롭게 vue.js에 대해 공부를 진행하고 있습니다. 차후 업로드 예정입니다!</span></p>
+                                                    </div>
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>
