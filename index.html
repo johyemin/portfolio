@@ -113,126 +113,28 @@
     <div class="mob_lnb_bar">
       <div class="inner">
         <h1 class="logo"><a href="index.html"><span class="ft_bold">Cho Hyemin</span> Portfolio</a></h1>
-        <div class="mob_lnb_toggle_btn">
-          <div class="lnb_btn_bar top"></div>
-          <div class="lnb_btn_bar bottom"></div>
-        </div>
+        <div class="mob_lnb_menu">
+            <div class="mob_lnb">
+              <ul>
+                <li>
+                  <a href="#tit">
+                    <p class="txt">Profile</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="#card_tit">
+                    <p class="txt">Works</p>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
       </div>
     </div>
-    <div class="mob_lnb_menu">
-      <div class="mob_lnb">
-        <ul>
-          <li class="select">
-            <a href="#tit">
-              <div class="lnb_icon">
-                <img class="icon" src="img/icon/nav_icon1.png" alt="마이페이지 아이콘">
-                <img class="icon on" src="img/icon/nav_icon1_on.png" alt="마이페이지 아이콘">
-              </div>
-              <p class="txt">Profile</p>
-            </a>
-          </li>
-          <li>
-            <a href="#card_tit">
-              <div class="lnb_icon">
-                <img class="icon" src="img/icon/nav_icon2.png" alt="마이페이지 아이콘">
-                <img class="icon on" src="img/icon/nav_icon2_on.png" alt="마이페이지 아이콘">
-              </div>
-              <p class="txt">Works</p>
-            </a>
-          </li>
-          <li>
-            <a href="https://drive.google.com/file/d/1UjFTGeBnS1EhWdy0NnZ8UQVk2dii1fZG/view?usp=sharing">
-              <div class="lnb_icon">
-                <div class="icon on i_icon"><i class="xi-profile-o"></i></div>
-              </div>
-              <p class="txt">자기소개서</p>
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/johyemin" target="_blank">
-              <div class="lnb_icon">
-                <div class="icon on i_icon"><i class="xi-github"></i></div>
-              </div>
-              <p class="txt">Github</p>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </div>
+
   </div>
   <script>
-    $(document).ready(function(){
-
-      $('.mob_lnb_menu').on('click', function(e){
-        if(!($(e.target).hasClass('mob_lnb') || $(e.target).parents('.mob_lnb').length > 0)){
-          gnbClose();
-        }
-      });
-    
-      $('.mob_lnb > ul > li').each(function(){
-        if($(this).hasClass('select')){
-          $(this).addClass('select');
-          $(this).find('ul').stop().slideDown(300);
-        }
-      });
-    
-      $('.mob_lnb > ul > li >div ').on('click', function(){
-        var $gnb = $(this).parent();
-        if($gnb.siblings('.select').length > 0){
-          $gnb.siblings('.select').find('ul').stop().slideUp(300);
-          $gnb.siblings('.select').removeClass('select');
-        }
-    
-        if($gnb.hasClass('select')){
-          $gnb.removeClass('select');
-          $gnb.find('ul').stop().slideUp(300);
-          
-        }else{
-          $gnb.addClass('select');
-          $gnb.find('ul').stop().slideDown(300);
-        }
-      });
-      $(document).on('click','.mob_lnb_toggle_btn',function(){
-        if($('.mob_lnb_wrap').hasClass('on')){
-          $('.mob_lnb_wrap').removeClass('on')
-          $('#wrap').css('overflow-y','inherit');
-        }else{
-          $('.mob_lnb_wrap').addClass('on')
-          $('#wrap').css('overflow-y','hidden');
-        }
-      });
-      jQuery.browser = {};
-      (function () {
-          jQuery.browser.msie = false;
-          jQuery.browser.version = 0;
-          if (navigator.userAgent.match(/MSIE ([0-9]+)\./)) {
-              jQuery.browser.msie = true;
-              jQuery.browser.version = RegExp.$1;
-          }
-      })();
-      let hdFixedFlag = false;
-      $('.wrap').scroll(function(){
-        let scrollHeight = $('.mob_lnb_bar').height();
-
-        let scrollTop = $(this).scrollTop();
-        if (scrollTop > scrollHeight) {
-          if(!hdFixedFlag){
-            hdFixedFlag = true;
-            setTimeout(function(){
-              $('.mob_lnb_bar').addClass('fixed');
-            }, 100);
-          }
-        } else {
-          if(hdFixedFlag){
-            hdFixedFlag = false;
-            $('.mob_lnb_bar').removeClass('fixed');
-          }
-        }
-      });
-
-
-    });
-    //mob resize
+    //mobile resize
     $(window).resize(function(){
       var winWdi = window.innerWidth;
       if(winWdi > 1080){
