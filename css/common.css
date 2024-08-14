@@ -194,14 +194,6 @@ body {
   }
 }
 
-/* com button */
-.com_btn_wrap {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  margin: -5px;
-}
 
 .btn_basic {
   border-radius: 10px;
@@ -324,12 +316,6 @@ body {
   font-size: 1.25em;
   width: 100%;
   height: 3em;
-}
-
-/* w: 100% h: 60px*/
-.btn_basic.half_btn {
-  width: calc(50% - 10px);
-  height: 3.125em;
 }
 
 .btn_basic.cancel_btn {
@@ -645,9 +631,6 @@ body {
 }
 
 @media screen and (max-width:540px) {
-  .btn_basic.half_btn {
-    width: 100%;
-  }
 
   .com_load_btn_wrap {
     align-items: flex-start;
@@ -832,7 +815,6 @@ textarea:focus::-webkit-input-placeholder {
   padding: 0 10px;
 }
 
-/* .plus_minus_field .number{display: flex; align-items: center; border-radius: 5px; border: 1px solid var(--border-basic); padding: 0 10px;} */
 .plus_minus_field .ellipse_btn {
   height: 100%;
   display: flex;
@@ -856,31 +838,6 @@ textarea:focus::-webkit-input-placeholder {
   font-weight: 500;
 }
 
-/* Hide Calendar Icon In Chrome */
-input::file-selector-button {
-  display: none;
-}
-
-input[type="date"]::-webkit-inner-spin-button,
-input[type="date"]::-webkit-calendar-picker-indicator {
-  display: none;
-  -webkit-appearance: none;
-}
-
-.input_box.unit_box .unit {
-  position: absolute;
-  top: 50%;
-  right: 10px;
-  transform: translateY(-50%);
-  color: var(--text-tertiary);
-}
-
-.input_box.unit_box .com_input {
-  padding-right: 1.875em !important;
-  text-align: right;
-}
-
-/*j mod*/
 
 @media screen and (max-width:760px) {
   .input_box {
@@ -898,7 +855,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   .agree_ck_field .text_btn {
     font-size: 0.875em;
   }
-}
+} */
 
 /* header */
 .header {
@@ -1120,16 +1077,9 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   top: -3.75em;
 }
 
-.lnb .lnb_menu_list .lnb_mark .lnb_mark_deco.top::after {
-  border-radius: 0 0 50% 0;
-}
 
 .lnb .lnb_menu_list .lnb_mark .lnb_mark_deco.bottom {
   bottom: -3.75em;
-}
-
-.lnb .lnb_menu_list .lnb_mark .lnb_mark_deco.bottom::after {
-  border-radius: 0 50% 0 0;
 }
 
 /* lnb_sign_list */

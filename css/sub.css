@@ -130,55 +130,6 @@
   font-weight: 600;
 }
 
-.btn_basic.card_more_btn {
-  position: relative;
-  padding: 0 8px;
-  padding-left: 9px;
-  height: 1.5em;
-  background-color: transparent;
-  border: 2px solid var(--point-blue-1);
-  color: var(--point-blue-1);
-  border-radius: 5px;
-}
-
-.btn_basic.card_more_btn .icon {
-  width: 1em;
-  height: 1em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: absolute;
-  top: 50%;
-  left: -9px;
-  transform: translateY(-50%);
-  background-color: var(--bg-basic);
-}
-
-.btn_basic.card_more_btn .icon::after {
-  content: "";
-  width: 12px;
-  height: 2px;
-  border-radius: 5em;
-  background-color: var(--point-blue-1);
-}
-
-.btn_basic.card_more_btn .icon::before {
-  content: "";
-  width: 2px;
-  height: 12px;
-  border-radius: 5em;
-  background-color: var(--point-blue-1);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
-.btn_basic.card_more_btn .txt {
-  font-size: 12px;
-  font-weight: 700;
-}
-
 /* card inner style */
 .card_row.wh_dashed .card_inner {
   background-color: var(--bg-basic);
@@ -283,7 +234,6 @@
 
 .my_info_wrap .my_info {
   align-items: center;
-  margin-bottom: 1.875em;
 }
 
 .my_info_wrap .my_info .my_img {
@@ -816,13 +766,13 @@
   display: block;
 }
 
-.project_list li .expiration_date {
+.project_list li .project_responsive {
   position: absolute;
   bottom: 10px;
   right: 10px;
 }
 
-.project_list li .expiration_date .date_txt {
+.project_list li .project_responsive .responsive {
   font-size: 12px;
   color: var(--text-reverse);
   background-color: var(--point-blue-11);
@@ -972,7 +922,7 @@
     margin: 0 auto;
   }
 
-  .project_list li .expiration_date {
+  .project_list li .project_responsive {
     bottom: 1.2rem;
   }
 }
@@ -993,7 +943,7 @@
     width: 33.33%;
   }
 
-  .project_list li .expiration_date .date_txt {
+  .project_list li .project_responsive .responsive {
     font-size: 10px;
   }
 
@@ -1130,7 +1080,7 @@
 .com_gallery_wrap .project_list li .desc_wrap .event_info {
   font-size: 12px;
   line-height: 1.25em;
-  color: var(--point-blue-1);
+  color: var(--point-blue-);
 }
 
 @media screen and (max-width:1080px) {
