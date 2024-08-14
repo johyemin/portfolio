@@ -40,8 +40,8 @@
                             <li class="select">
                                 <a href="#tit">
                                     <div class="lnb_icon">
-                                        <img class="icon" src="img/icon/nav_icon1.png" alt="마이페이지 아이콘">
-                                        <img class="icon on" src="img/icon/nav_icon1_on.png" alt="마이페이지 아이콘">
+                                        <img class="icon" src="img/icon/nav_icon1.png" alt="icon">
+                                        <img class="icon on" src="img/icon/nav_icon1_on.png" alt="icon">
                                     </div>
                                     <div class="lnb_tit">Profile</div>
                                 </a>
@@ -49,8 +49,8 @@
                             <li>
                                 <a href="#card_tit">
                                     <div class="lnb_icon">
-                                        <img class="icon" src="img/icon/nav_icon2.png" alt="마이페이지 아이콘">
-                                        <img class="icon on" src="img/icon/nav_icon2_on.png" alt="마이페이지 아이콘">
+                                        <img class="icon" src="img/icon/nav_icon2.png" alt="icon">
+                                        <img class="icon on" src="img/icon/nav_icon2_on.png" alt="icon">
                                     </div>
                                     <div class="lnb_tit">Works</div>
                                 </a>
@@ -58,8 +58,8 @@
                             <li>
                                 <a href="https://drive.google.com/file/d/1UjFTGeBnS1EhWdy0NnZ8UQVk2dii1fZG/view?usp=sharing">
                                     <div class="lnb_icon">
-                                        <img class="icon" src="img/icon/nav_icon3.png" alt="마이페이지 아이콘">
-                                        <img class="icon on" src="img/icon/nav_icon3_on.png" alt="마이페이지 아이콘">
+                                        <img class="icon" src="img/icon/nav_icon3.png" alt="icon">
+                                        <img class="icon on" src="img/icon/nav_icon3_on.png" alt="icon">
                                     </div>
                                     <div class="lnb_tit">자기소개서</div>
                                 </a>
@@ -67,8 +67,8 @@
                             <li>
                                 <a href="https://github.com/johyemin" target="_blank">
                                     <div class="lnb_icon">
-                                        <img class="icon" src="img/icon/nav_icon4.png" alt="마이페이지 아이콘">
-                                        <img class="icon on" src="img/icon/nav_icon4_on.png" alt="마이페이지 아이콘">
+                                        <img class="icon" src="img/icon/nav_icon4.png" alt="icon">
+                                        <img class="icon on" src="img/icon/nav_icon4_on.png" alt="icon">
                                     </div>
                                     <div class="lnb_tit">Github</div>
                                 </a>
@@ -80,12 +80,11 @@
 <!-- script -->
             <script>
                 $(document).ready(function () {
-                    //lnb 마우스 오버 시 따라다니는 mask : s
                     $('.lnb_menu_list ul > li').each(function () {
-                        let $selectList = $('.lnb_menu_list ul > li.select');
-                        $selectList.addClass('mouseover');
+                        let $select = $('.lnb_menu_list ul > li.select');
+                        $select.addClass('mouseover');
                         let $mark = $(this).parents('#lnb').find('.lnb_mark');
-                        let lnbActive = $selectList.position().top;
+                        let lnbActive = $select.position().top;
                         $mark.css('top', lnbActive);
 
 
@@ -98,7 +97,7 @@
                         });
                         $(this).mouseleave(function () {
                             $('.lnb_menu_list ul > li').removeClass('mouseover');
-                            $selectList.addClass('mouseover');
+                            $select.addClass('mouseover');
                             $mark.css('top', lnbActive);
                         });
                     });
@@ -150,7 +149,7 @@
             <div class="com_sub_section_wrap">
                 <div class="com_sub_cont_wrap portfolio_dashboard">
                     <div class="com_sub_cont_tit">
-                        <p id="tit">Portfolio</p>
+                        <p id="tit">Profile</p>
                     </div>
                     <div class="com_card_wrap flex_cont">
                         <section class="card_row fix_row my_card_row">
