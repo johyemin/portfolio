@@ -32,16 +32,9 @@
   --point-blue-11: #B2CAE0;
   --point-blue-12: #F7F9FB;
 
-  --point-yellow-1: #F59234;
-  --point-yellow-2: #8E772F;
-  --point-yellow-3: #FDEFC4;
-  --point-yellow-4: #EE8827;
   --point-pink-1: #CD1717;
   --point-pink-2: #FDEDF0;
-  --point-green-1: #4E9680;
-  --point-green-2: #D8F3E8;
-  --point-green-3: #EBF6EE;
-  --point-green-4: #33AF57;
+
 
   /* Gradient Color */
   --gradient-blue: linear-gradient(120deg, rgba(0,79,152,0.8),rgba(21,107,187,0.8));
@@ -110,10 +103,6 @@
   --popup-bg : var(--mono-12);
   --popup-border: #707070;
 
-  /* toast */
-  --toast-bg : var(--point-green-3);
-  --toast-border : var(--point-green-4);
-  --toast-txt : var(--point-green-4);
 
 }
-/* color root : e */
+
