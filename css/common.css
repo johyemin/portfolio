@@ -1,13 +1,12 @@
 @charset "utf-8";
+@import url(pretendard.css);
+@import url(gmarketSans.css);
+
 .etc_btn {
   background-color: var(--mono-12);
   color: var(--point-blue-1);
   border-color: var(--point-blue-1);
 }
-
-
-@import url(pretendard.css);
-@import url(gmarketSans.css);
 
 /* common setting */
 * {
@@ -37,6 +36,17 @@ body {
   font-size: 16px;
   height: 100%;
 }
+
+.hidden{
+  width: 1px;
+  height: 1px;
+  font-size: 0;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 
 @media screen and (max-width:1400px) and (min-width:1081px) {
 
@@ -520,7 +530,7 @@ body {
 }
 
 .load_btn .txt {
-  white-space: anowrap;
+  white-space: nowrap;
 }
 
 .load_btn i,
@@ -855,7 +865,7 @@ textarea:focus::-webkit-input-placeholder {
   .agree_ck_field .text_btn {
     font-size: 0.875em;
   }
-} */
+} 
 
 /* header */
 .header {
@@ -1259,6 +1269,28 @@ textarea:focus::-webkit-input-placeholder {
     display: block;
   }
 
+}
+
+@media screen and (max-width : 620px) {
+
+  .mob_lnb_wrap .mob_lnb_bar .inner .logo a{
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  .mob_lnb ul li {
+    font-size: 1.15em;
+    margin: 0.5em;
+  }
+  
+}
+
+@media screen and (max-width : 440px) {
+  .mob_lnb ul li{
+    font-size: 1em;
+  }
+  
 }
 
 /* lnb 백그라운드 색상 */

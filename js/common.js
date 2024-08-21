@@ -16,12 +16,7 @@ $(document).ready(function(){
       // popup 
       if($(e.target).hasClass('info_popup')){
         // 베이직 info_popup 팝업
-        $('.info_popup').hide();
-  
-        // 멤버 관련 팝업
-        // $('.info_sign_popup').show();
-        // $('.info_sign_popup').stop().animate({'top': '-100%'}, 300);
-  
+        $('.info_popup').hide();  
         $('html, body').css('overflow','inherit');
       }
       if(!($(e.target).parents().hasClass('tooltip_wrap') || $(e.target).hasClass('tooltip_close'))){
@@ -30,12 +25,6 @@ $(document).ready(function(){
   
     })
     // html, body 클릭시 창 닫기 : e
-  
-    // top_btn : s
-    $('.scroll_top_btn').on('click', function(){
-      $('.wrap').stop().animate({'scrollTop': 0},500);
-    });
-    // top_btn : e
   
   
     // 아코디언 구동 : s (알림 , 메세지)
@@ -77,6 +66,8 @@ $(document).ready(function(){
       
     });
     //tab contents : e
+
+    // porfoio btn
   
   }); //document
   

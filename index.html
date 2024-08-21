@@ -56,7 +56,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="https://drive.google.com/file/d/1UjFTGeBnS1EhWdy0NnZ8UQVk2dii1fZG/view?usp=sharing">
+                                <a href="introduce.html">
                                     <div class="lnb_icon">
                                         <img class="icon" src="img/icon/nav_icon3.png" alt="icon">
                                         <img class="icon on" src="img/icon/nav_icon3_on.png" alt="icon">
@@ -77,7 +77,7 @@
                     </div>
                 </div>
             </div>
-<!-- script -->
+            <!-- script -->
             <script>
                 $(document).ready(function () {
                     $('.lnb_menu_list ul > li').each(function () {
@@ -105,45 +105,51 @@
                 });
 
             </script>
-<!-- script -->
+            <!-- script -->
 
-<!-- header upper -->
-<div class="mob_lnb_wrap">
-    <div class="mob_lnb_bar">
-      <div class="inner">
-        <h1 class="logo"><a href="index.html"><span class="ft_bold">Cho Hyemin</span> Portfolio</a></h1>
-        <div class="mob_lnb_menu">
-            <div class="mob_lnb">
-              <ul>
-                <li>
-                  <a href="#tit">
-                    <p class="txt">Profile</p>
-                  </a>
-                </li>
-                <li>
-                  <a href="#card_tit">
-                    <p class="txt">Works</p>
-                  </a>
-                </li>
-              </ul>
+            <!-- header upper -->
+            <div class="mob_lnb_wrap">
+                <div class="mob_lnb_bar">
+                    <div class="inner">
+                        <h1 class="logo"><a href="index.html"><span class="ft_bold">Cho Hyemin</span> Portfolio</a></h1>
+                        <div class="mob_lnb_menu">
+                            <div class="mob_lnb">
+                                <ul>
+                                    <li>
+                                        <a href="#tit">
+                                            <p class="txt">Profile</p>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#card_tit">
+                                            <p class="txt">Works</p>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="introduce.html">
+                                            <p class="txt">자기소개서</p>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
-          </div>
-      </div>
-    </div>
+            <script>
+                //mobile resize
+                $(window).resize(function () {
+                    var windth = window.innerWidth;
+                    if (windth > 1080) {
+                        $('.mob_lnb_wrap').removeClass('on')
+                        $('#wrap').css('overflow-y', 'inherit');
+                    }
+                });
 
-  </div>
-  <script>
-    //mobile resize
-    $(window).resize(function(){
-      var windth = window.innerWidth;
-      if(windth > 1080){
-        $('.mob_lnb_wrap').removeClass('on')
-        $('#wrap').css('overflow-y','inherit');
-      }
-    });
-
-  </script>
-<!-- header upper -->
+            </script>
+            <!-- header upper -->
 
 
             <div class="com_sub_section_wrap">
@@ -153,6 +159,7 @@
                     </div>
                     <div class="com_card_wrap flex_cont">
                         <section class="card_row fix_row my_card_row">
+                            <h2 class="hidden">profile</h2>
                             <div class="card_inner flex_cont">
                                 <div class="card_cont_area my_info_area">
                                     <div class="my_info_wrap">
@@ -165,12 +172,14 @@
                                                     <span class="name ft_bold">조혜민</span>입니다.
                                                 </div>
                                             </div>
+                                        </div>
                                     </div>
                                 </div>
 
                             </div>
                         </section>
                         <section class="card_row fluid_row intro_card_row">
+                            <h2 class="hidden">about</h2>
                             <div class="card_inner scroll_inner">
                                 <div class="card_head">
                                     <div class="card_tit">About</div>
@@ -256,6 +265,7 @@
                         </section>
 
                         <section class="card_row skill_card_row">
+                            <h2 class="hidden">skill</h2>
                             <div class="card_head">
                                 <div class="card_tit">Skill</div>
                             </div>
@@ -365,7 +375,8 @@
                                                     <div class="skill_name">Git</div>
                                                     <div class="skill_thumb"><img src="img/git.png" alt="git"></div>
                                                     <div class="skill_txt_box">
-                                                        <div class="subject">파일을 업로드 할 수 있습니다 <br>터미널이 익숙하지 않지만 커밋에 대한 개념을
+                                                        <div class="subject">파일을 업로드 할 수 있습니다 <br>터미널이 익숙하지 않지만 커밋에 대한
+                                                            개념을
                                                             가지고 있습니다.</div>
                                                         <div class="info">
                                                         </div>
@@ -379,6 +390,7 @@
                         </section>
 
                         <section class="card_row proof_card_row com_gallery_wrap">
+                            <h2 class="hidden">works</h2>
                             <div class="card_head">
                                 <div id="card_tit">Works</div>
                                 <div class="card_info">
@@ -508,7 +520,8 @@
                                                     <div class="desc_wrap">
                                                         <p class="prd_tit max_line_2">Lumière</p>
                                                         <p class="brand"><span class="txt">창착 쥬얼리 브랜드를 제작했습니다.
-                                                                Cafe 24의 유연성과 기능적인 편리함을 활용해 각 제품에 맞는 명확한 카테고리 분류와 함께 브랜드의
+                                                                Cafe 24의 유연성과 기능적인 편리함을 활용해 각 제품에 맞는 명확한 카테고리 분류와 함께
+                                                                브랜드의
                                                                 이벤트 배너를 제작했습니다.</span></p>
                                                         <p class="event_info">기획˙참여 100% </p>
                                                     </div>
@@ -549,8 +562,7 @@
                                                 <a href="#" target="_blank">
                                                     <div class="thumnail">
                                                         <div class="inner">
-                                                            <div class="img"
-                                                                style="background-color: #333;">
+                                                            <div class="img" style="background-color: #333;">
                                                                 <!--thum-->
                                                             </div>
                                                             <div class="project_responsive">
