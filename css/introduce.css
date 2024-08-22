@@ -69,6 +69,10 @@ header .header_menu ul li{
     margin: 1.25em;
 }
 
+header .header_menu ul li:nth-child(3)>a>.txt>br{
+    display: none;
+}
+
 header .header_bar .inner .ham span{
     content: '';
     display: inline-block;
@@ -92,6 +96,19 @@ header .header_bar .inner .ham span{
 
     header .header_menu ul li{
         font-size: 1.15em;
+        margin: 0.8em;
+    }
+
+    header .header_menu ul li:nth-child(3)>a>.txt{
+        text-align: center;
+    }
+
+    header .header_menu ul li:nth-child(3)>a>.txt>br{
+        display: block;
+    }
+
+    header .header_menu ul li:nth-child(3)>a>.txt>.dot{
+        display: none;
     }
 }
 
@@ -116,6 +133,13 @@ header .header_bar .inner .ham span{
     }
 
 } 
+
+@media screen and (max-width : 420px){
+    header .header_menu ul li {
+        margin: 0.5em;
+    }
+
+}
 
 /* com_sub */
 .sub_wrap {
