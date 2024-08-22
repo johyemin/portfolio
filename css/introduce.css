@@ -923,7 +923,11 @@ header .header_bar .inner .ham span{
     }
 
     .accordion_cont .accordion_head .subject {
-        font-size: 1.15em;
+        font-size: 1em;
+    }
+
+    .accordion_cont .accordion_head .term{
+        display: none;
     }
 
     #resume_tit{
@@ -946,6 +950,24 @@ header .header_bar .inner .ham span{
 
     .accordion_cont .accordion_head .resume_tit{
         font-size: 1.15em;
+    }
+}
+
+@media screen and (max-width:380px) {
+    header .header_bar .inner .logo{
+        display: none;
+    }
+
+    header .header_bar .header_menu {
+        width: 100%;
+    }
+
+    header .header_menu ul{
+        width: 100%;
+    }
+
+    header .header_menu ul li {
+        margin: auto;
     }
 }
 
