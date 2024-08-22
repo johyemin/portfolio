@@ -920,6 +920,18 @@
   line-height: 1.25rem;
 }
 
+@media screen and (max-width:1280px) {
+  .project_list li {
+    width: 25%;
+  }
+
+  .project_list li .point_info {
+    position: static;
+    margin-top: 10px;
+  }
+}
+
+
 @media screen and (max-width:1730px) and (min-width:951px) {
   .project_list li .buy_icon_wrap .buy_icon {
     padding: 6px 4px;
@@ -935,16 +947,6 @@
   }
 }
 
-@media screen and (max-width:1280px) {
-  .project_list li {
-    width: 25%;
-  }
-
-  .project_list li .point_info {
-    position: static;
-    margin-top: 10px;
-  }
-}
 
 @media screen and (max-width:950px) {
   .project_list li {
@@ -979,6 +981,15 @@
   .all_product_row .card_top_select {
     width: auto;
     margin-top: 0;
+  }
+
+  .card_row .card_head {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #card_tit {
+    margin-bottom: 0.5em;
   }
 
   .project_list {
